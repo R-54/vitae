@@ -1,0 +1,218 @@
+:root {
+  --mclaren-orange: #ffac3d;
+  --mclaren-grey: #cfcfcf;
+  --mclaren-black: #1d1d1b;
+  --mclaren-blue: #0A0388;
+
+  --transparent-mask: rgba(0, 0, 0, 0.6);
+}
+
+
+.vitae {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: var(--mclaren-black);
+  font-family: 'Jura', sans-serif;
+}
+
+
+.nav-bar {
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "name button";
+  background-color: white;
+}
+.nav-bar__name {
+  grid-area: "name";
+  place-self: center left;
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 25px;
+}
+.name__job-title {
+  font-size: 8px;
+  line-height: 0;
+}
+.nav-bar__button {
+  grid-area: "button";
+  place-self: center center;
+  color: var(--mclaren-orange);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: all 0.2s linear 0.1s;
+}
+.nav-bar__button--rotate-right {
+  transform: rotate(360deg);
+}
+.nav-bar__button--rotate-left {
+  transform: rotate(0deg);
+}
+
+
+.collapsible-content {
+  top: 10%;
+  width: 60%;
+  height: 90%;
+  position: fixed;
+  z-index: 9;
+  background-color: var(--mclaren-orange);
+  font-size: 11px;
+  text-align: justify;
+  text-justify: inter-word;
+  transition: all 0.2s linear 0.1s;
+}
+.collapsible-content--collapse {
+  left: 100%;
+}
+.collapsible-content--show {
+  left: 40%;
+}
+.collapsible-content__contact {
+  line-height: 33px;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+.collapsible-content__profile--title {
+  font-size: 14px;
+  background-color: white;
+  margin-top: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.collapsible-content__profile--content {
+  padding: 25px;
+}
+
+
+.content {
+  width: 100%;
+  top: 10%;
+  position: relative;
+  background-color: white;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 11px;
+}
+.content__mask {
+  height: 90%;
+  width: 100%;
+  top: 10%;
+  position: fixed;
+  background-color: var(--transparent-mask);
+  z-index: 8;
+}
+.content__mask--collapse {
+  height: 0;
+  transition: all 0.2s linear 0.3s;
+}
+.content__mask--show {
+  height: 100%;
+  transition: all 0.2s linear 0s;
+}
+.content-elements {
+  margin-bottom: 25px;
+  white-space: pre-wrap;
+}
+.content-elements__title {
+  font-size: 14px;
+  background-color: var(--mclaren-orange);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  font-weight: bold;
+}
+.content-body {
+  padding: 25px;
+  padding-bottom: 0;
+}
+.content-body__subtitle {
+  font-weight: bold;
+}
+.content-body__info {}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .collapsible-content {
+    left: 0;
+    width: 30%;
+  }
+  .content {
+    width: 70%;
+    left: 30%;
+  }
+  .content__title {
+    background-color: var(--mclaren-grey);
+  }
+  .nav-bar__button {
+    display: none;
+  }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .collapsible-content {
+    left: 0;
+    width: 30%;
+  }
+  .content {
+    width: 70%;
+    left: 30%;
+  }
+  .content__title {
+    background-color: var(--mclaren-grey);
+  }
+  .nav-bar__button {
+    display: none;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .collapsible-content {
+    left: 0;
+    width: 20%;
+  }
+  .content {
+    width: 80%;
+    left: 20%;
+  }
+  .content__title {
+    background-color: var(--mclaren-grey);
+  }
+  .nav-bar__button {
+    display: none;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .collapsible-content {
+    left: 0;
+    width: 20%;
+  }
+  .content {
+    width: 80%;
+    left: 20%;
+  }
+  .content__title {
+    background-color: var(--mclaren-grey);
+  }
+  .nav-bar__button {
+    display: none;
+  }
+}
