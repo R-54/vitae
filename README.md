@@ -48,4 +48,4 @@
 
 ## Authors
 
-#### Ivan Rodriguez Soria - Software developer# Home
+#### Ivan Rodriguez Soria - Software developer
